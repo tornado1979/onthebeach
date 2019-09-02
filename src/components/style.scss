@@ -1,9 +1,12 @@
-$headerBG: #17317f;
+$blue: #17317f;
+$white: #ffffff;
+$lightgrey: lightgrey;
 $headerPadding: 10px;
-$fontColor: #fff;
+$aliceBlue: aliceblue;
 
+/* header component*/
 .header {
-  background-color: $headerBG;
+  background-color: $blue;
   padding: $headerPadding;
 
   .menu {
@@ -14,11 +17,93 @@ $fontColor: #fff;
   }
 
   a {
-    color: $fontColor;
+    color: $white;
     text-decoration: none;
 
     &:hover {
       text-decoration: underline;
     }
+  }
+}
+
+/*Sort component*/
+.sort {
+  max-width: 300px;
+  width: 300px;
+  background-color: $white;
+  display: flex;
+  flex-flow: column;
+
+  .option:nth-child(2) {
+    border-top: 1px solid $blue;
+    border-bottom: 1px solid $blue;
+  }
+
+  .option {
+    padding: 0 20px 0 20px;
+    background-color: $white;
+    color: $blue;
+    cursor: pointer;
+    font-weight: 600;
+
+    &:hover {
+      background-color: $aliceBlue;
+    }
+
+    &.active {
+      color: $white;
+      background-color: $blue;
+
+      .fa-star {
+        color: $white;
+      }
+
+      .circle {
+        background-color: $white;
+      }
+
+      .price-symbol {
+        color: $blue;
+      }
+    }
+
+    p {
+      display: inline-block;
+      padding-right: 5px;
+
+      &.emphasized{
+        font-weight: 700;
+      }
+      &:nth-child(3) {
+        float: right;
+      }
+    }
+  }
+
+  .fa-star {
+    color: $lightgrey;
+    position: sticky;
+    left: 100%;
+    font-size: 22px;
+  }
+
+  .circle {
+    background-color: $lightgrey;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    left: 100%;
+    position: sticky;
+    display: inline-block;
+  }
+
+  .price-symbol {
+    color: $white;
+  }
+
+  .price-symbol:before {
+    content: '£';
+    left: 7px;
+    position: relative;
   }
 }
