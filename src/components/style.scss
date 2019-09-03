@@ -9,6 +9,7 @@ $yellowDark: #ebc200;
 
 $padding: 0.83rem;
 $radius: 0.33rem;
+$font-size-default: 1.3rem;
 
 .body {
   font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -42,7 +43,7 @@ $radius: 0.33rem;
 
 /*Sort component*/
 .sort {
-  font-size: 1.3rem;
+  font-size: $font-size-default;
   max-width: 300px;
   width: 300px;
   background-color: $white;
@@ -158,6 +159,22 @@ $radius: 0.33rem;
     .text-line2{
       font-weight: 700;
       font-size: 1.6rem;
+    }
+  }
+}
+
+
+/* <Rating /> component*/
+.rating{
+  display: inline-flex;
+
+  .star{
+    font-size: $font-size-default;
+    padding: 0.2rem;
+    color: $lightgrey;
+
+    &.yellow{
+      color: $yellowLight;
     }
   }
 }
