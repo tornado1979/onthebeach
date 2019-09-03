@@ -1,0 +1,53 @@
+[
+  {
+    "id": 1,
+    "hotel_name": "Iberostar Grand Salome",
+    "location": "Costa adeje, Tenerife",
+    "star_rating": 5,
+    "image": "/images/hotel-image-1.png",
+    "guests": {
+      "adults": 2,
+      "children": 2,
+      "infants": 1
+    },
+    "dateStart": "3rd July 2019",
+    "days": 7,
+    "departFrom": "East Midlands",
+    "overview": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged..",
+    "price":1136.50
+  },
+  {
+    "id": 2,
+    "hotel_name": "Agua Marina Golf Hotel",
+    "location": "Costa Adeje, Tenerife",
+    "star_rating": 4,
+    "image": "/images/hotel-image-2.png",
+    "guests": {
+      "adults": 2,
+      "children": 1,
+      "infants": 0
+    },
+    "dateStart": "27th May 2019",
+    "days": 7,
+    "departFrom": "Liverpool",
+    "overview": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged..",
+    "price": 696.80
+  },
+  {
+    "id": 3,
+    "hotel_name": "Las Piramides Resort",
+    "location": "Costa Adeje, Tenerife",
+    "star_rating": 3,
+    "image": "/images/hotel-image-3.png",
+    "guests": {
+      "adults": 2,
+      "children": 2,
+      "infants": 0
+    },
+    "dateStart": "3rd July 2019",
+    "days": 7,
+    "departFrom": "Manchester",
+    "overview": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged..",
+    "price": 499.99
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+  "symbol": "AZ",
+    "text": "sort alphabetically"
+  },
+  {
+    "symbol": "price",
+    "text": "Sort by price"
+  },
+  {
+    "symbol": "star",
+    "text": "sort by star rating"
+  }
+]

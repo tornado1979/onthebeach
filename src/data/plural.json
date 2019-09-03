@@ -1,0 +1,14 @@
+{
+  "adults": {
+    "plural": "adults",
+    "single": "adult"
+  },
+  "children": {
+    "plural": "children",
+    "single": "child"
+  },
+  "infants": {
+    "plural": "infants",
+    "single": "infant"
+  }
+}
