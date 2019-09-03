@@ -25,7 +25,7 @@ const Drawer = (props) => {
   return (
     <div className="drawer-wrapper">
       <div className='drawer'>
-        <div class="row title" onClick={handleClick}>
+        <div className="row title" onClick={handleClick}>
           <span className="emphasize">{`${props.label.more}  `}</span>
           <span>{`${props.label.title}  `}</span>
           <i className={arrowStyle}></i>
