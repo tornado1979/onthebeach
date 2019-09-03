@@ -2,15 +2,21 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Rating = (props) => {
-  return (
-    <div className="rating">
-      {[1,2,3,4,5].map(item => {
-        return (<div className={props.rating >= item ? 'star yellow' : 'star'} key={item}>
+  function buildRatingStars(){
+    let rating_stars=[];
+
+    for(let i=0;i<props.rating;i++){
+      rating_stars.push(<div className={props.rating >= i ? 'star yellow' : 'star'} key={i}>
           <i className="fa fa-star" ></i>
           </div>)
-          }
-        )
-      }
+    }
+
+    return rating_stars;
+  }
+
+  return (
+    <div className="rating">
+      {buildRatingStars()}
     </div>
   )
 }
