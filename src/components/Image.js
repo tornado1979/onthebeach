@@ -5,7 +5,7 @@ import defaultImage from '../images/hotel-image-1.png';
 const Image = (props) => {
   return (
     <div>
-      <img src={props.imgUrl} />
+      <img src={props.imgUrl} style={{width: '100%'}}/>
     </div>
   )
 }

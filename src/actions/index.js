@@ -5,27 +5,54 @@ import {
   SORT_BY_RATING,
 } from '../actionTypes'
 
-const dummy = [
-    {
-      id: 2,
-      hotel_name: "Iberostar Grand Salome",
-      location: "costa adeje, Tenerife",
-      star_rating: 5,
-      image:"../assets/images/image_01.png",
-      adults: 2,
-      children: 1,
-      infants: 1,
-      dateStart: "3rd July 2019",
-      days: 7,
-      departFrom: "East Midlands",
-      overview: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged..",
-      price:1136.50
-    }
-]
+import { getLocalState } from '../selectors'
 
-export const sortAlphabetically = () => {
-  return {
-    payload: dummy,
-    type: SORT_ALPHBETICALLY
+
+
+export const changeSortOrder = (sortId) => {
+  let sortedData=[]
+  let type=''
+  switch(sortId){
+    case "0":
+       sortedData = sortByField('hotel_name')
+       type = SORT_ALPHBETICALLY
+       break
+    case "1":
+       sortedData = sortByField('price')
+       type = SORT_BY_PRICE
+       break
+    case "2":
+       sortedData = sortByField('star_rating')
+       type = SORT_BY_RATING
+       break
+    default:
+       sortedData = sortByField('hotel_name')
+       type = SORT_ALPHBETICALLY
+       break
   }
+
+  return {
+    payload: {
+      displayData: sortedData,
+    },
+    type,
+  }
+}
+
+export const sortByField = (fieldName) => {
+  const data = getLocalState();
+
+  return Array.prototype.slice.call(data).sort(function(a, b) {
+    var nameA = a[fieldName]; // ignore upper and lowercase
+    var nameB = b[fieldName]; // ignore upper and lowercase
+    if (nameA < nameB) {
+      return -1;
+    }
+    if (nameA > nameB) {
+      return 1;
+    }
+    // values must be equal
+    return 0;
+  });
+
 }

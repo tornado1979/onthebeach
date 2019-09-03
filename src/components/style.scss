@@ -127,17 +127,21 @@
   flex-flow: column;
   background-color: $white;
   margin: 0 0 add(1) 0;
-  max-width: 725.63px;
+  max-width: 61.15rem;
 
   .row:first-child{
     display: flex;
+  }
+
+  .left-column {
+    width: 65%;
   }
 
   .right-column{
     margin: auto;
     padding-left: add(0.3);
     padding-right: add(0.3);
-    width: 100%;
+    width: 35%;
   }
 }
 
@@ -149,8 +153,7 @@
     border-radius: $radius;
     color: $blue;
     width: 100%;
-    padding: $padding;
-    padding: 0.41rem 0;
+    padding: add(-0.2) 0;
     margin: add(-0.47) 0;
     border: none;
     cursor: pointer;
@@ -194,11 +197,11 @@
 
   .title {
     color: $blue;
-    font-weight: 600;
+    font-weight: 700;
     font-size: add(0.2);
   }
   .sub-title{
-    font-size: add(0.1);
+    font-size: add(-0.1);
     color: $lightgrey;
   }
 }
@@ -233,7 +236,7 @@
   }
 
   .overview-description{
-    font-size: add(-0.2);
+    font-size: add(-0.1);
     font-weight: 500;
   }
 

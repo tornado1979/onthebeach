@@ -6,9 +6,10 @@ import data from './data/data.json'
 import options from './data/options.json'
 import plural from './data/plural.json'
 
-// Initial state
+// Initial statei
 const initialState = {
-  data,
+  data,  // ths is the source of truth, these data are immutable
+  displayData: data, // these are the data that i display to the end user after sort or filter
   options,
   plural
 };

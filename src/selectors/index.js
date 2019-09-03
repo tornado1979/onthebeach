@@ -8,6 +8,10 @@ export const getData = (state) => {
   return (state && state.data) || []
 }
 
+export const getDisplayData = (state) => {
+  return (state && state.displayData) || []
+}
+
 export const getOptions = (state) => {
   return (state && state.options) || []
 }

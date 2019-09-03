@@ -1,13 +1,17 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
 import Sort from '../../components/Sort';
 import CardList from '../../components/CardList';
 
 import {
-  getData,
+  getDisplayData,
   getOptions,
 } from '../../selectors'
 
+import {
+  changeSortOrder
+} from '../../actions'
 
 import '../style.scss';
 
@@ -17,8 +21,15 @@ class Home extends Component {
   }
 
 
-  handleSortClick = (event) => {
-    console.log('sort clicked', event.target);
+  componentDidMount(){
+    // Default hotels sort is Alphabeticaly
+    // call action 'changeSorting()'
+    this.props.changeSorting(0);
+  }
+
+  handleSortClick = (selectedOption) => {
+    // call action 'changeSorting()'
+    this.props.changeSorting(selectedOption.id);
   }
 
   render(){
@@ -28,7 +39,7 @@ class Home extends Component {
           <Sort handleSortClick={this.handleSortClick} options={this.props.options}/>
         </div>
         <div className="home-right-column">
-          <CardList cards={this.props.data}/>
+          <CardList cards={this.props.displayData}/>
         </div>
       </div>
     )
@@ -38,9 +49,13 @@ class Home extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    data: getData(state),
+    displayData: getDisplayData(state),
     options: getOptions(state),
   }
 }
 
-export default connect(mapStateToProps)(Home)
+const mapDispatchToProps = dispatch => bindActionCreators({
+  changeSorting: changeSortOrder,
+}, dispatch)
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home)

@@ -29,7 +29,7 @@ const Card = (props) => {
           <Label text={concatGuests(pluralData, card.guests)} type='default'/>
           <Label text={`${card.dateStart} for ${card.days} days`} type='default'/>
           <Label text={`departing from ${card.departFrom}`} type='default'/>
-          <Button textLine2={card.price}/>
+          <Button textLine2={`£ ${card.price}`}/>
         </div>
       </div>
       <div className="row" style={{position: 'relative', top:'-37px'}}>

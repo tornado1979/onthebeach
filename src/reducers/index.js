@@ -43,8 +43,19 @@ const reducer = (state = initialState, action) => {
   switch (action.type) {
     case SORT_ALPHBETICALLY:
       return {
+        ...state,
         ...action.payload
       }
+    case SORT_BY_PRICE:
+      return {
+        ...state,
+        ...action.payload
+      }
+    case SORT_BY_RATING:
+     return {
+       ...state,
+       ...action.payload
+     }
     default:
       return state
   }

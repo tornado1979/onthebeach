@@ -41,7 +41,7 @@ const Sort = (props) => {
 
     const activeOption = parseInt(selectedOption.id);
 
-    props.handleSortClick(event);
+    props.handleSortClick(selectedOption);
 
     // update state
     setActive(activeOption);

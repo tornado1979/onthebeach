@@ -6,7 +6,6 @@ const Drawer = (props) => {
   const [active, setActive] = useState(false);
 
   function handleClick(event){
-    console.log('event', event.target);
     setActive(!active)
   }
 
