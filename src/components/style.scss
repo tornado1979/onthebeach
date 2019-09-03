@@ -2,7 +2,13 @@ $blue: #17317f;
 $white: #ffffff;
 $lightgrey: lightgrey;
 $headerPadding: 10px;
-$aliceBlue: aliceblue;
+$aliceBlue: #f0f8ff;
+$lightGold: lightgoldenrodyellow;
+
+.main {
+  background-image: url('../images/background.png');
+  height: 100vh;
+}
 
 /* header component*/
 .header {
@@ -106,4 +112,12 @@ $aliceBlue: aliceblue;
     left: 7px;
     position: relative;
   }
+}
+
+
+/*Card component*/
+.card {
+  width: 500px;
+  height: 200px;
+  background-color: $white;
 }
