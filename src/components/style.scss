@@ -4,7 +4,15 @@ $lightgrey: lightgrey;
 $headerPadding: 10px;
 $aliceBlue: #f0f8ff;
 $lightGold: lightgoldenrodyellow;
+$yellowLight: #fedc07;
+$yellowDark: #ebc200;
 
+$padding: 0.83rem;
+$radius: 0.33rem;
+
+.body {
+  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
 .main {
   background-image: url('../images/background.png');
   height: 100vh;
@@ -34,6 +42,7 @@ $lightGold: lightgoldenrodyellow;
 
 /*Sort component*/
 .sort {
+  font-size: 1.3rem;
   max-width: 300px;
   width: 300px;
   background-color: $white;
@@ -117,7 +126,38 @@ $lightGold: lightgoldenrodyellow;
 
 /*Card component*/
 .card {
-  width: 500px;
-  height: 200px;
-  background-color: $white;
+  width: 700px;
+  height: auto;
+  border: 1px solid blue;
+  display: flex;
+
+  .right-column{
+    width: 100%;
+  }
+}
+
+
+/*<Button/> component*/
+.button{
+  &--primary {
+    background-color: $yellowLight;
+    border-radius: $radius;
+    color: $blue;
+    width: 100%;
+    padding: $padding;
+    border: none;
+
+    &:hover {
+      background-color: $yellowDark;
+    }
+
+    .text-line1{
+      display: block;
+      font-weight: 600;
+    }
+    .text-line2{
+      font-weight: 700;
+      font-size: 1.6rem;
+    }
+  }
 }
