@@ -134,9 +134,13 @@ $font-size-default: 1.3rem;
 /*Card component*/
 .card {
   width: 60%;
-  height: auto;
   display: flex;
+  flex-flow: column;
   background-color: $white;
+
+  .row:first-child{
+    display: flex;
+  }
 
   .right-column{
     margin: auto;
@@ -158,6 +162,7 @@ $font-size-default: 1.3rem;
     padding: 0.41rem 0;
     margin: add(-0.47) 0;
     border: none;
+    cursor: pointer;
 
     &:hover {
       background-color: $yellowDark;
@@ -204,4 +209,47 @@ $font-size-default: 1.3rem;
     font-size: add(0.1);
     color: $lightgrey;
   }
+}
+
+/*<Drawer/> component*/
+.drawer{  
+  font-size: $font-size-default;
+  position: relative;
+  cursor: pointer;
+
+  .emphasize {
+    font-weight: 700;
+  }
+  
+  .row {
+    padding: 0.5rem $padding;
+  }
+
+  .title{
+    width: 25%;
+    background-color: $white;
+    color: $blue;
+  }
+
+  .overview{
+    color: $blue;
+    padding: $padding 0;
+  }
+
+  .arrow{
+    left: 100%;
+    position: sticky;
+    font-size: 1.9rem;
+    font-weight: 700;
+  }
+
+  .info-block{
+    padding-right: add(0.3);
+    display: none;
+
+    &.active{
+      display: block;
+    }
+  }
+
 }
