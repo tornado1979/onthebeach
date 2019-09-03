@@ -1,15 +1,4 @@
-$blue: #17317f;
-$white: #ffffff;
-$lightgrey: lightgrey;
-$headerPadding: 10px;
-$aliceBlue: #f0f8ff;
-$lightGold: lightgoldenrodyellow;
-$yellowLight: #fedc07;
-$yellowDark: #ebc200;
-
-$padding: 0.83rem;
-$radius: 0.33rem;
-$font-size-default: 1.3rem;
+@import '../styles/variables.scss';
 
 // add rem to the $font-size-default variable,
 // to make font-size larger. e.g. in .title
@@ -22,7 +11,8 @@ $font-size-default: 1.3rem;
 }
 .main {
   background-image: url('../images/background.png');
-  height: 100vh;
+  display: flex;
+  justify-content: center;
 }
 
 /* header component*/
@@ -50,8 +40,8 @@ $font-size-default: 1.3rem;
 /*Sort component*/
 .sort {
   font-size: $font-size-default;
-  max-width: 300px;
-  width: 300px;
+  max-width: 25rem;
+  width: 25rem;
   background-color: $white;
   display: flex;
   flex-flow: column;
@@ -133,10 +123,11 @@ $font-size-default: 1.3rem;
 
 /*Card component*/
 .card {
-  width: 60%;
   display: flex;
   flex-flow: column;
   background-color: $white;
+  margin: 0 0 add(1) 0;
+  max-width: 725.63px;
 
   .row:first-child{
     display: flex;
@@ -226,7 +217,7 @@ $font-size-default: 1.3rem;
   }
 
   .title{
-    width: 25%;
+    width: 30%;
     background-color: $white;
     color: $blue;
   }
