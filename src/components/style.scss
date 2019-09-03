@@ -11,6 +11,12 @@ $padding: 0.83rem;
 $radius: 0.33rem;
 $font-size-default: 1.3rem;
 
+// add rem to the $font-size-default variable,
+// to make font-size larger. e.g. in .title
+@function add($num) {
+  @return $font-size-default + $num;
+}
+
 .body {
   font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -127,12 +133,15 @@ $font-size-default: 1.3rem;
 
 /*Card component*/
 .card {
-  width: 700px;
+  width: 60%;
   height: auto;
-  border: 1px solid blue;
   display: flex;
+  background-color: $white;
 
   .right-column{
+    margin: auto;
+    padding-left: add(0.3);
+    padding-right: add(0.3);
     width: 100%;
   }
 }
@@ -146,6 +155,8 @@ $font-size-default: 1.3rem;
     color: $blue;
     width: 100%;
     padding: $padding;
+    padding: 0.41rem 0;
+    margin: add(-0.47) 0;
     border: none;
 
     &:hover {
@@ -167,6 +178,7 @@ $font-size-default: 1.3rem;
 /* <Rating /> component*/
 .rating{
   display: inline-flex;
+  padding: 0.41rem 0;
 
   .star{
     font-size: $font-size-default;
@@ -176,5 +188,20 @@ $font-size-default: 1.3rem;
     &.yellow{
       color: $yellowLight;
     }
+  }
+}
+
+/* <Label/> component*/
+.label{
+  font-size: $font-size-default;
+
+  .title {
+    color: $blue;
+    font-weight: 600;
+    font-size: add(0.2);
+  }
+  .sub-title{
+    font-size: add(0.1);
+    color: $lightgrey;
   }
 }
