@@ -31,8 +31,8 @@ const Drawer = (props) => {
           <i className={arrowStyle}></i>
         </div>
         <div className={infoBlockStyle}>
-          <div className="overview emphasize">{props.label.overview}</div>
-          <div>{props.label.info}</div>
+          <div className="overview-title emphasize">{props.label.overview}</div>
+          <div className="overview-description">{props.label.info}</div>
         </div>
       </div>
     </div>
