@@ -4,9 +4,8 @@ import PropTypes from 'prop-types';
 import reg from '../helpers/reg';
 
 const Sort = (props) => {
-  // default active option is the 1st
-  const [active, setActive] = useState(0);
-
+  // default active option is passed from props
+  const [active, setActive] = useState(props.defaultActive);
 
   /**
   * @desc handle click
@@ -24,8 +23,12 @@ const Sort = (props) => {
         <div className="price-symbol">
         </div>
       </div>)
+      case 'calendar':
+        return <i className="fa fa-calendar" aria-hidden="true"></i>
+      case 'plane':
+         return <i className="fa fa-paper-plane" aria-hidden="true"></i>
       default:
-         return <p className="alphabetical">{symbol}</p>
+        return <p className="alphabetical">{symbol}</p>
     }
   }
 
@@ -74,6 +77,7 @@ Sort.defaultProps  = {
 }
 
 Sort.propTypes = {
+  defaultActive: PropTypes.number,
   options: PropTypes.array,
   handleSortClick: PropTypes.func.isRequired,
 }

@@ -38,6 +38,7 @@
 }
 
 /*Sort component*/
+.filters,
 .sort {
   font-size: $font-size-default;
   max-width: 25rem;
@@ -46,9 +47,8 @@
   display: flex;
   flex-flow: column;
 
-  .option:nth-child(2) {
-    border-top: 1px solid $blue;
-    border-bottom: 1px solid $blue;
+  .option:last-child {
+    border-bottom: none;
   }
 
   .option {
@@ -57,6 +57,7 @@
     color: $blue;
     cursor: pointer;
     font-weight: 600;
+    border-bottom: 1px solid $blue;
 
     &:hover {
       background-color: $aliceBlue;
@@ -66,6 +67,8 @@
       color: $white;
       background-color: $blue;
 
+      .fa-calendar,
+      .fa-paper-plane,
       .fa-star {
         color: $white;
       }
@@ -77,6 +80,11 @@
       .price-symbol {
         color: $blue;
       }
+    }
+
+    &.title {
+      color: $white;
+      background-color: $blue;
     }
 
     p {
@@ -92,6 +100,8 @@
     }
   }
 
+  .fa-calendar,
+  .fa-paper-plane,
   .fa-star {
     color: $lightgrey;
     position: sticky;

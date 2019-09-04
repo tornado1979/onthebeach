@@ -1,4 +1,5 @@
-[
+{
+  "sort": [
   {
   "symbol": "AZ",
     "text": "sort alphabetically"
@@ -10,5 +11,5 @@
   {
     "symbol": "star",
     "text": "sort by star rating"
-  }
-]
+  }]
+}

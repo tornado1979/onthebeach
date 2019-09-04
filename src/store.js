@@ -9,9 +9,12 @@ import plural from './data/plural.json'
 // Initial statei
 const initialState = {
   data,  // ths is the source of truth, these data are immutable
-  displayData: data, // these are the data that i display to the end user after sort or filter
+  displayData: [...data], // these are the data that i display to the end user after sort or filter
   options,
-  plural
+  plural,
+  sortedBy: 'hotel_name',
+  filteredBy1: '',
+  filteredBy2: ''
 };
 
 const enhancers = []

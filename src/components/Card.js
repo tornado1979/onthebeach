@@ -27,8 +27,8 @@ const Card = (props) => {
           <Label text={card.location} type='sub-title' />
           <Rating rating={card.star_rating}/>
           <Label text={concatGuests(pluralData, card.guests)} type='default'/>
-          <Label text={`${card.dateStart} for ${card.days} days`} type='default'/>
-          <Label text={`departing from ${card.departFrom}`} type='default'/>
+          <Label text={`${card.departureDate} for ${card.days} days`} type='default'/>
+          <Label text={`departing from ${card.departAirport}`} type='default'/>
           <Button textLine2={`£ ${card.price}`}/>
         </div>
       </div>
@@ -51,9 +51,9 @@ Card.propTypes = {
       "children": PropTypes.number,
       "infants": PropTypes.number,
     }),
-    "dateStart":PropTypes.string,
+    "departureDate":PropTypes.string,
     "days": PropTypes.number,
-    "departFrom": PropTypes.string,
+    "departAirport": PropTypes.string,
     "overview": PropTypes.string,
     "price": PropTypes.number,
   })
