@@ -44,7 +44,7 @@ export const changeFilter = (filterValue, fieldName) => {
   // get the whole state
   const state = getAllState();
   //1. sort data from start, based on 'sortedBy' value 'hotel_name', 'price' etc
-  const sortedData = sortByField2(state.sortedBy)
+  const sortedData = getSortedData(state.sortedBy)
 
   if(fieldName === 'departureDate'){
     //2. filter based on 'departureDate' on the sorted data
@@ -96,16 +96,19 @@ export const changeSortOrder = (sortId) => {
 
   switch(sortId){
     case "0":
+    case 'hotel_name':
        sortedData = sortByField('hotel_name')
        type = SORT_ALPHBETICALLY
        sortedBy = 'hotel_name'
        break
     case "1":
+    case "price":
        sortedData = sortByField('price')
        type = SORT_BY_PRICE
        sortedBy = 'price'
        break
     case "2":
+    case "star_rating":
        sortedData = sortByField('star_rating')
        type = SORT_BY_RATING
        sortedBy = 'star_rating'
@@ -139,18 +142,7 @@ export const sortByField = (fieldName) => {
   //const data = getLocalState();
 
   //1. SORT THE DATA
-  const sortedData = Array.prototype.slice.call(state.data).sort(function(a, b) {
-    var nameA = a[fieldName]; // ignore upper and lowercase
-    var nameB = b[fieldName]; // ignore upper and lowercase
-    if (nameA < nameB) {
-      return -1;
-    }
-    if (nameA > nameB) {
-      return 1;
-    }
-    // values must be equal 
-    return 0;
-  });
+  const sortedData = getSortedData(fieldName)
 
   //2. FILTER BY filteredBy1 & filteredBy2
    const filteredBy1 = state.filteredBy1
@@ -169,7 +161,7 @@ export const sortByField = (fieldName) => {
   return filteredData || sortedData;
 }
 //
-export const sortByField2 = (fieldName) => {
+export const getSortedData = (fieldName) => {
   const data = getLocalState();
 
   return Array.prototype.slice.call(data).sort(function(a, b) {
