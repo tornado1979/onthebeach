@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Card from './Card';
+import Block from './Block';
+import noresults from '../images/noresults.png'
 
 const CardList = (props) => {
   return (
@@ -9,6 +11,8 @@ const CardList = (props) => {
      {props.cards.map((card, idx) => {
       return (<Card card={card} key={card.id} />)
     })}
+
+    {!props.cards.length && <Block img={noresults} />}
     </div>
   )
 }
