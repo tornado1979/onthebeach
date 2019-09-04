@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 const Button = (props) => {
   return (
     <button className="button--primary">
-      <span className="text-line1">{props.textLine1}</span>
-      <span className="text-line2">{props.textLine2}</span>
+      <span className="text-line1" data-testid="line1">{props.textLine1}</span>
+      <span className="text-line2" data-testid="line2">{props.textLine2}</span>
     </button>
   )
 }

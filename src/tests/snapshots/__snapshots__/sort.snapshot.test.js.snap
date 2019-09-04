@@ -1,29 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Rating reners the component 1`] = `
-<div
-  className="rating"
->
-  <div
-    className="star yellow"
-  >
-    <i
-      className="fa fa-star"
-    />
-  </div>
-  <div
-    className="star yellow"
-  >
-    <i
-      className="fa fa-star"
-    />
-  </div>
-</div>
-`;
-
 exports[`Sort renders correctly 1`] = `
 <div
   className="sort"
+  data-testid="sort"
 >
   <div
     className="option active"
@@ -41,7 +21,7 @@ exports[`Sort renders correctly 1`] = `
     <p
       className="alphabetical"
     >
-      symbol1
+      symbol 1
     </p>
   </div>
   <div
@@ -60,7 +40,7 @@ exports[`Sort renders correctly 1`] = `
     <p
       className="alphabetical"
     >
-      symbol2
+      symbol 2
     </p>
   </div>
   <div
@@ -79,71 +59,7 @@ exports[`Sort renders correctly 1`] = `
     <p
       className="alphabetical"
     >
-      symbol3
-    </p>
-  </div>
-</div>
-`;
-
-exports[`Sort reners the component 1`] = `
-<div
-  className="sort"
->
-  <div
-    className="option active"
-    id={0}
-    onClick={[Function]}
-  >
-    <p>
-      sort 
-    </p>
-    <p
-      className="emphasized"
-    >
-      1
-    </p>
-    <p
-      className="alphabetical"
-    >
-      symbol1
-    </p>
-  </div>
-  <div
-    className="option"
-    id={1}
-    onClick={[Function]}
-  >
-    <p>
-      sort 
-    </p>
-    <p
-      className="emphasized"
-    >
-      2
-    </p>
-    <p
-      className="alphabetical"
-    >
-      symbol2
-    </p>
-  </div>
-  <div
-    className="option"
-    id={2}
-    onClick={[Function]}
-  >
-    <p>
-      sort 
-    </p>
-    <p
-      className="emphasized"
-    >
-      3
-    </p>
-    <p
-      className="alphabetical"
-    >
-      symbol3
+      symbol 3
     </p>
   </div>
 </div>

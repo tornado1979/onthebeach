@@ -6,11 +6,13 @@ exports[`Button renders correctly 1`] = `
 >
   <span
     className="text-line1"
+    data-testid="line1"
   >
     Book now
   </span>
   <span
     className="text-line2"
+    data-testid="line2"
   >
     £ 1,300.00
   </span>

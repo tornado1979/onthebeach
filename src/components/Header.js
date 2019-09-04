@@ -8,7 +8,6 @@ export default () => {
     <div className="header">
       <div className="menu">
         <div className="menu-item"><Link to="/" >Home</Link></div>
-        <div className="menu-item"><Link to="/about" >About</Link></div>
       </div>
     </div>
   )

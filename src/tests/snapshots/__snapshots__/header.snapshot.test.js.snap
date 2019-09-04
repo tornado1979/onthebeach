@@ -17,16 +17,6 @@ exports[`Header renders correctly 1`] = `
         Home
       </a>
     </div>
-    <div
-      className="menu-item"
-    >
-      <a
-        href="/about"
-        onClick={[Function]}
-      >
-        About
-      </a>
-    </div>
   </div>
 </div>
 `;

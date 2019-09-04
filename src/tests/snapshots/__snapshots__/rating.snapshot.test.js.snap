@@ -3,6 +3,7 @@
 exports[`Rating renders correctly 1`] = `
 <div
   className="rating"
+  data-testid="rating"
 >
   <div
     className="star yellow"

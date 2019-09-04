@@ -34,7 +34,7 @@ CardList.defaultProps  =
 ]}
 
 CardList.propTypes = {
-  cards: PropTypes.shape({
+  cards: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.number,
     hotel_name: PropTypes.string,
     location: PropTypes.string,
@@ -47,9 +47,8 @@ CardList.propTypes = {
     days: PropTypes.number,
     dateFrom:  PropTypes.string,
     overview:  PropTypes.string,
-    price:  PropTypes.bool,
-  }),
-  handleSortClick: PropTypes.func.isRequired,
+    price:  PropTypes.boolean,
+  }))
 }
 
 export default CardList;

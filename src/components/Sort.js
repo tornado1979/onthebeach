@@ -49,14 +49,14 @@ const Sort = (props) => {
 
   let msg;
   return (
-    <div className="sort">
+    <div className="sort" data-testid="sort">
       {props.options.map((sort, idx) => {
       msg = reg(sort.text);
       return (<div className={active === idx ? 'option active' : 'option'}
                    id={idx}
                    key={sort.text}
                    onClick={handleClick}>
-                <p>{msg.first}</p>
+                <p >{msg.first}</p>
                 <p className="emphasized">{msg.second}</p>
                 {getSymbol(sort.symbol)}
               </div>)
@@ -66,7 +66,11 @@ const Sort = (props) => {
 }
 
 Sort.defaultProps  = {
-  options: [{text: 'sort 1', symbol: 'symbol1'}, {text: 'sort 2', symbol: 'symbol2'}, {text: 'sort 3', symbol: 'symbol3'}]
+  options: [
+    {text: 'sort 1', symbol: 'symbol 1'},
+    {text: 'sort 2', symbol: 'symbol 2'},
+    {text: 'sort 3', symbol: 'symbol 3'}
+  ]
 }
 
 Sort.propTypes = {

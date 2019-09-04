@@ -6,7 +6,7 @@ const Rating = (props) => {
     let rating_stars=[];
 
     for(let i=0;i<props.rating;i++){
-      rating_stars.push(<div className={props.rating >= i ? 'star yellow' : 'star'} key={i}>
+      rating_stars.push(<div className={props.rating >= i ? 'star yellow' : 'star'} key={i} >
           <i className="fa fa-star" ></i>
           </div>)
     }
@@ -15,7 +15,7 @@ const Rating = (props) => {
   }
 
   return (
-    <div className="rating">
+    <div className="rating" data-testid="rating">
       {buildRatingStars()}
     </div>
   )
