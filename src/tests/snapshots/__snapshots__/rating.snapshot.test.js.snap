@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Rating renders correctly 1`] = `
+<div
+  className="rating"
+>
+  <div
+    className="star yellow"
+  >
+    <i
+      className="fa fa-star"
+    />
+  </div>
+  <div
+    className="star yellow"
+  >
+    <i
+      className="fa fa-star"
+    />
+  </div>
+</div>
+`;

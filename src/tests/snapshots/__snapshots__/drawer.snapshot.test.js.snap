@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Drawer renders correctly 1`] = `
+<div
+  className="drawer-wrapper"
+>
+  <div
+    className="drawer"
+  >
+    <div
+      className="row title"
+      onClick={[Function]}
+    >
+      <span
+        className="emphasize"
+      >
+        Read more  
+      </span>
+      <span>
+        about this hotel  
+      </span>
+      <i
+        className="arrow fa fa-angle-right"
+      />
+    </div>
+    <div
+      className="row info-block"
+    >
+      <div
+        className="overview-title emphasize"
+      >
+        Overview
+      </div>
+      <div
+        className="overview-description"
+      >
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged..
+      </div>
+    </div>
+  </div>
+</div>
+`;

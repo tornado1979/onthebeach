@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Image renders correctly 1`] = `
+<div>
+  <img
+    src="hotel-image-1.png"
+    style={
+      Object {
+        "width": "100%",
+      }
+    }
+  />
+</div>
+`;

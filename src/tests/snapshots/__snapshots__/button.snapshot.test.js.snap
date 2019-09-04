@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button renders correctly 1`] = `
+<button
+  className="button--primary"
+>
+  <span
+    className="text-line1"
+  >
+    Book now
+  </span>
+  <span
+    className="text-line2"
+  >
+    £ 1,300.00
+  </span>
+</button>
+`;
