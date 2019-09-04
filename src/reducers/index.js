@@ -3,7 +3,8 @@ import {
   SORT_BY_PRICE,
   SORT_BY_RATING,
   FILTER_BY_DEPART_DATE,
-  FILTER_BY_DEPART_AIRPORT
+  FILTER_BY_DEPART_AIRPORT,
+  RESET_FILTER
 } from '../actionTypes'
 
 const initialState = {
@@ -48,8 +49,6 @@ const reducer = (state = initialState, action) => {
         ...state,
         sortedBy: 'hotel_name',
         ...action.payload,
-        filteredBy1: '',  // clear the filters
-        filteredBy2: ''   // clear the filters
       }
     case SORT_BY_PRICE:
       return {
@@ -69,7 +68,11 @@ const reducer = (state = initialState, action) => {
         ...state,
         ...action.payload,
       }
-   
+   case RESET_FILTER:
+      return {
+        ...state,
+        ...action.payload
+      }
     default:
       return state
   }

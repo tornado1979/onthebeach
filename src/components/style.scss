@@ -38,6 +38,26 @@
 }
 
 /*Sort component*/
+.filters {
+  .option.reset{
+    background-color: $whiteSmoke;
+    font-weight: 700;
+    &:hover {
+      background-color: $lightgrey;
+    }
+  }
+  .option.title{
+    background-color: $whiteSmoke;
+    color: $blue;
+    font-weight: 700;
+    cursor: default;
+
+    &:hover {
+      background-color: $whiteSmoke;
+    }
+  }
+}
+
 .filters,
 .sort {
   font-size: $font-size-default;
@@ -82,10 +102,7 @@
       }
     }
 
-    &.title {
-      color: $white;
-      background-color: $blue;
-    }
+
 
     p {
       display: inline-block;
@@ -138,6 +155,7 @@
   background-color: $white;
   margin: 0 0 add(1) 0;
   max-width: 61.15rem;
+  width: 61.15rem;
 
   .row:first-child{
     display: flex;

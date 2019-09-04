@@ -8,6 +8,10 @@ export const getLocalState = () => {
   return store.getState().data
 }
 
+export const getCurrentSortField = (state) => {
+  return (state && state.sortedBy) || 'hotel_name'
+}
+
 export const getData = (state) => {
   return (state && state.data) || []
 }
