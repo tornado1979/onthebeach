@@ -3,6 +3,7 @@
 exports[`Image renders correctly 1`] = `
 <div>
   <img
+    alt="hotel"
     src="hotel-image-1.png"
     style={
       Object {
