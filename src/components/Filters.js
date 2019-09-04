@@ -33,11 +33,6 @@ const Filters = (props) => {
   * with the filter id value, so to know which filter to clear, from state
   */
   function resetFilter(event){
-
-    const selectedOption = event.target.classList.contains('option') ?
-     event.target : event.target.parentElement;
-
-
     // call parent's function, passing the filter id
     props.resetFilter(props.id)
 

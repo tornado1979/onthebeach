@@ -39,7 +39,6 @@ const filterByField = (sortedData, filterValue, fieldName) => {
 * @return array of sorted AND filtered data
 */
 export const changeFilter = (filterValue, fieldName) => {
-  let type = '';
   let filteredData = [];
 
   // get the whole state
