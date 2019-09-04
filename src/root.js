@@ -1,8 +1,6 @@
 import React from 'react'
-import { Router, Route, Link  } from 'react-router-dom'
+import { Router, Route  } from 'react-router-dom'
 import { Provider } from 'react-redux'
-
-import store from './store'
 
 import Home from './pages/home';
 import Header from './components/Header';

@@ -16,10 +16,6 @@ import {
 import '../style.scss';
 
 class Home extends Component {
-  constructor(props) {
-    super(props)
-  }
-
 
   componentDidMount(){
     // Default hotels sort is Alphabeticaly
