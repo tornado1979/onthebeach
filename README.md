@@ -1,5 +1,106 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+
+This is a react + redux front end app, displaying a card list that is managed by 
+sort and filter components.
+
+
+## Tech stack
+
+- react
+- redux
+- sass
+
+Packages used:
+
+- "classnames"
+- "eslint"
+- "eslint-config-airbnb"
+- "font-awesome"
+- react-router-dom
+- "@testing-library/dom"
+- "@testing-library/react"
+
+
+## Sort functionality
+
+1. by default the data are sorted 'alphabetically' (a -> z)
+2. by clicking on 'sort by price' the data are re-rendered in 'price' order (small to large)
+3. by clicking on 'sort by star rating' the data are re-rendered in 'rating' order (small to large)
+
+## Fiters functonality
+
+Filters (departdate & departairport) work together with the sorting, so:
+
+1. when a user clicks on a 'sort option' and then clicks on the 1st filter(departure date),
+   then, he sees data based on the selected 'sort' and the selected 'filter(departure date)
+
+2. when a user clicks on a 'sort option' and then clicks on the 2nd filter(depart airport),
+   then, he sees data based on the selected 'sort' and the selected 'filter(depart airport)
+
+3. when a user clicks on a 'sort option' and then clicks on the 1st filter(depart date) and the 2nd filter(depart airport), then, he sees data based on the selected 'sort' and the two selected 'filters'
+
+4. when a user clicks 'reset filter' on either the 1st filter(depart date) or the 2nd filter(depart airport), then, he sees data based on the selected 'sort' and the remaining active 'filter'
+
+5. when a user clicks 'reset filter' on the remaining active 'filter', then, he sees data based only on the selected 'sort', as there are no active 'fiters'.
+
+
+## Folder structure
+
+The structure of the project is this:
+```
+src/
+  actions/  <!-- redux actions -->
+  actionTypes/
+  components/  <!-- functional components -->
+    Block.js
+    Button.js
+    Card.js
+    CardList.js
+    Drawer.js
+    Filters.js
+    Header.js
+    Image.js
+    Label.js
+    Rating.js
+    Sort.js
+    style.scss <!-- all component styles -->
+  data/  <!-- dummy data for the store-->
+    data.json
+    options.json
+    plural.json  <!-- for  adult/adults etc -->
+  helpers/
+    concatGuests.js
+    history.js
+    reg.js
+  images/
+  middlewares/
+  pages/
+    home/
+      index.js
+    style.scss
+  reducers/
+  styles/
+    varables.scss <!-- general variables -->
+  tests/
+    snapshot/
+    unit/
+  index.js
+  root.js
+  store.js
+  .eslintrc
+  package.json
+  package-lock.json
+  README.md
+```
+
+## Screenshots
+
+[A quick visual gif of the home page, here.](http://g.recordit.co/HszIsPYF8p.gif)
+
+![final outcome](/readme_imgs/home-page.png)
+
+
 ## Available Scripts
 
 In the project directory, you can run:
